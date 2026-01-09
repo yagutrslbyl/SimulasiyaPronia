@@ -1,0 +1,58 @@
+﻿@using SimulasiyaPronia.ViewModels
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+@model RegisterVM
+
+
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Register Page</p>
+        </div>
+
+        <form asp-action="Register" method="post">
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div asp-validation-summary="ModelOnly">
+
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Name" class="form-control" placeholder="Your Name *" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input asp-for="Surname" class="form-control" placeholder="Surname" />
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control" placeholder="Email *" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <input asp-for="Password" class="form-control" placeholder="Password *" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password *" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btnSubmit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
